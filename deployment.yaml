@@ -17,8 +17,8 @@ spec:
     spec:
       containers:
         - name: caas
-      image: redbridge/caas:1
-      imagePullPolicy: Always
-      ports:
-        - name: web
-          containerPort: 8080
+          image: redbridge/caas:1
+          imagePullPolicy: Always
+          ports:
+            - name: web
+              containerPort: 8080
