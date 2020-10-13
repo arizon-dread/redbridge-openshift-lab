@@ -5,7 +5,7 @@ metadata:
   labels:
     app: caas
 spec:
-  replicas: 3
+  replicas: 1
   revisionHistoryLimit: 1
   selector:
     matchLabels:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: caas
-          image: redbridge/caas:2
+          image: redbridge/caas:3
           imagePullPolicy: Always
           ports:
             - name: web
