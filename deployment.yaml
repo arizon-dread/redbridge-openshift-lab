@@ -28,3 +28,23 @@ spec:
               cpu: 100m
             limits:
               memory: 64Mi
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /count
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 2
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /count
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 2
